@@ -1,10 +1,8 @@
 import socket
 import requests
 
-# Отримуємо локальну IP
 local_ip = socket.gethostbyname(socket.gethostname())
 
-# Отримуємо публічну IP
 try:
     public_ip = requests.get('https://api.ipify.org').text
 except:
